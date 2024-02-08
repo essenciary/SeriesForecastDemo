@@ -1,7 +1,11 @@
 # This script runs your Genie app as a JuliaHub Deployment
 
 # Start Genie from the app directory
-joinpath(@__DIR__, "..") |> cd
+@warn("PWD: ", pwd())
+@warn("@DIR", @__DIR__)
+@warn("readdir", readdir())
+
+cd("/opt/juliahub/appbundle/")
 
 # don't send command line arguments to Genie
 empty!(ARGS)
